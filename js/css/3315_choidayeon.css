@@ -1,0 +1,13 @@
+body{
+    background-color: #bef5d3;
+}
+
+#face_img{
+    height: 50%;
+    width: 50%;
+}
+
+.saying{
+    margin-top: 20px;
+    color: #074611;
+}
