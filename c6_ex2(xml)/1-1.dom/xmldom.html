@@ -2,6 +2,12 @@
   <body>
     <h1>W3Schools Internal Note</h1>
     <div>
+      <b>To:</b> <span id="to1"></span><br />
+      <b>From:</b> <span id="from1"></span><br />
+      <b>Message:</b> <span id="message1"></span>
+    </div>
+    <br /><br />
+    <div>
       <b>To:</b> <span id="to2"></span><br />
       <b>From:</b> <span id="from2"></span><br />
       <b>Message:</b> <span id="message2"></span>
@@ -24,8 +30,9 @@
       xmlhttp.open("GET", "note.xml", false);
       xmlhttp.send();
       xmlDoc = xmlhttp.responseXML;
+      console.log(xmlDoc);
 
-      for (let i = 2; i <= 3; i++) {
+      for (let i = 1; i <= 3; i++) {
         document.getElementById(
           "to" + i
         ).innerHTML = xmlDoc.getElementsByTagName("to")[
