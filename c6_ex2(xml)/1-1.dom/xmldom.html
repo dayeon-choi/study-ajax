@@ -1,0 +1,47 @@
+<html>
+  <body>
+    <h1>W3Schools Internal Note</h1>
+    <div>
+      <b>To:</b> <span id="to2"></span><br />
+      <b>From:</b> <span id="from2"></span><br />
+      <b>Message:</b> <span id="message2"></span>
+    </div>
+    <br /><br />
+    <div>
+      <b>To:</b> <span id="to3"></span><br />
+      <b>From:</b> <span id="from3"></span><br />
+      <b>Message:</b> <span id="message3"></span>
+    </div>
+
+    <script>
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.open("GET", "note.xml", false);
+      xmlhttp.send();
+      xmlDoc = xmlhttp.responseXML;
+
+      for (let i = 2; i <= 3; i++) {
+        document.getElementById(
+          "to" + i
+        ).innerHTML = xmlDoc.getElementsByTagName("to")[
+          i - 1
+        ].childNodes[0].nodeValue;
+        document.getElementById(
+          "from" + i
+        ).innerHTML = xmlDoc.getElementsByTagName("from")[
+          i - 1
+        ].childNodes[0].nodeValue;
+        document.getElementById(
+          "message" + i
+        ).innerHTML = xmlDoc.getElementsByTagName("body")[
+          i - 1
+        ].childNodes[0].nodeValue;
+      }
+    </script>
+  </body>
+</html>
