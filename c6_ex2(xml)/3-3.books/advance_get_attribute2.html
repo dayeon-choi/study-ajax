@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div></div>
+    <script>
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.open("GET", "books.xml", false);
+      xmlhttp.send();
+      xmlDoc = xmlhttp.responseXML;
+
+      /*en과 paperback 출력*/
+      txt1 = xmlDoc.getElementsByTagName("title")[3].getAttribute("lang");
+      txt2 = xmlDoc.getElementsByTagName("book")[3].getAttribute("cover");
+      document.write(txt1 + "<br>" + txt2 + "<br><br>");
+
+      /*출력해보고 싶은 것 정해서 출력하기*/
+      document.write("==============================<br>");
+      document.write("I want to print category, children!<br>");
+      txt3 = xmlDoc.getElementsByTagName("book")[1].getAttribute("category");
+      document.write("=> " + txt3);
+    </script>
+  </body>
+</html>
