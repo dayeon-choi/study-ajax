@@ -28,6 +28,9 @@
       document.write("=============================<br>");
       let soldtotalArr = ["100", "100", "100", "99"];
       for (i = 0; i < soldtotalArr.length; i++) {
+        if (i == 2) {
+          x[2].setAttribute("cover", "softcover");
+        }
         document.write("Cover: " + x[i].getAttribute("cover") + "<br>");
         x[i].setAttribute("soldtotal", soldtotalArr[i]);
         document.write("soldtotal: " + x[i].getAttribute("soldtotal") + "<br>");
