@@ -1,212 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../4-4.cd_catalog/cd_catalog.css"?>
+<?xml-stylesheet type="text/css" href="index.css"?>
 <CATALOG>
 	<CD>
-		<TITLE>Empire Burlesque</TITLE>
-		<ARTIST>최다연</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>Columbia</COMPANY>
-		<PRICE>10.90</PRICE>
-		<YEAR>1985</YEAR>
+		<No>1</No>
+		<TITLE>You Can</TITLE>
+		<ARTIST>3315최다연</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>Mirim</COMPANY>
+		<PRICE>99.1</PRICE>
+		<YEAR>2021</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Hide your heart</TITLE>
-		<ARTIST>Bonnie Tyler</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>CBS Records</COMPANY>
-		<PRICE>9.90</PRICE>
-		<YEAR>1988</YEAR>
+		<No>2</No>
+		<TITLE>놀이공원</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>13.5</PRICE>
+		<YEAR>2021</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Greatest Hits</TITLE>
-		<ARTIST>Dolly Parton</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>RCA</COMPANY>
-		<PRICE>9.90</PRICE>
-		<YEAR>1982</YEAR>
+		<No>3</No>
+		<TITLE>Bungee</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>9.82</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Still got the blues</TITLE>
-		<ARTIST>Gary Moore</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Virgin records</COMPANY>
-		<PRICE>10.20</PRICE>
-		<YEAR>1990</YEAR>
+		<No>4</No>
+		<TITLE>Bambi</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>10.35</PRICE>
+		<YEAR>2021</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Eros</TITLE>
-		<ARTIST>Eros Ramazzotti</ARTIST>
-		<COUNTRY>EU</COUNTRY>
-		<COMPANY>BMG</COMPANY>
-		<PRICE>9.90</PRICE>
-		<YEAR>1997</YEAR>
+		<No>5</No>
+		<TITLE>Popin</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>11.15</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>One night only</TITLE>
-		<ARTIST>Bee Gees</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Polydor</COMPANY>
-		<PRICE>10.90</PRICE>
-		<YEAR>1998</YEAR>
+		<No>6</No>
+		<TITLE>라일락</TITLE>
+		<ARTIST>아이유</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>EDAM 엔터테인먼트</COMPANY>
+		<PRICE>9.16</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Sylvias Mother</TITLE>
-		<ARTIST>Dr.Hook</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>CBS</COMPANY>
-		<PRICE>8.10</PRICE>
-		<YEAR>1973</YEAR>
+		<No>7</No>
+		<TITLE>Coin</TITLE>
+		<ARTIST>아이유</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>EDAM 엔터테인먼트</COMPANY>
+		<PRICE>9.12</PRICE>
+		<YEAR>2021</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Maggie May</TITLE>
-		<ARTIST>Rod Stewart</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Pickwick</COMPANY>
-		<PRICE>8.50</PRICE>
-		<YEAR>1990</YEAR>
+		<No>8</No>
+		<TITLE>그 사람</TITLE>
+		<ARTIST>아이유</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>EDAM 엔터테인먼트</COMPANY>
+		<PRICE>8.12</PRICE>
+		<YEAR>2019</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Romanza</TITLE>
-		<ARTIST>Andrea Bocelli</ARTIST>
-		<COUNTRY>EU</COUNTRY>
-		<COMPANY>Polydor</COMPANY>
-		<PRICE>10.80</PRICE>
-		<YEAR>1996</YEAR>
+		<No>9</No>
+		<TITLE>불티</TITLE>
+		<ARTIST>태연</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>13.56</PRICE>
+		<YEAR>2019</YEAR>
 	</CD>
 	<CD>
-		<TITLE>When a man loves a woman</TITLE>
-		<ARTIST>Percy Sledge</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>Atlantic</COMPANY>
-		<PRICE>8.70</PRICE>
-		<YEAR>1987</YEAR>
+		<No>10</No>
+		<TITLE>Find Me</TITLE>
+		<ARTIST>태연</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>8.91</PRICE>
+		<YEAR>2019</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Black angel</TITLE>
-		<ARTIST>Savage Rose</ARTIST>
-		<COUNTRY>EU</COUNTRY>
-		<COMPANY>Mega</COMPANY>
-		<PRICE>10.90</PRICE>
-		<YEAR>1995</YEAR>
+		<No>11</No>
+		<TITLE>Mermaid</TITLE>
+		<ARTIST>볼빨간사춘기</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>쇼파르뮤직</COMPANY>
+		<PRICE>9.12</PRICE>
+		<YEAR>2019</YEAR>
 	</CD>
 	<CD>
-		<TITLE>1999 Grammy Nominees</TITLE>
-		<ARTIST>Many</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>Grammy</COMPANY>
-		<PRICE>10.20</PRICE>
-		<YEAR>1999</YEAR>
+		<No>12</No>
+		<TITLE>나비와 고양이</TITLE>
+		<ARTIST>볼빨간사춘기(feat.백현)</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>쇼파르뮤직</COMPANY>
+		<PRICE>10.10</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>For the good times</TITLE>
-		<ARTIST>Kenny Rogers</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Mucik Master</COMPANY>
-		<PRICE>8.70</PRICE>
-		<YEAR>1995</YEAR>
+		<No>13</No>
+		<TITLE>R U Ridin?</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>8.88</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Big Willie style</TITLE>
-		<ARTIST>Will Smith</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>Columbia</COMPANY>
-		<PRICE>9.90</PRICE>
-		<YEAR>1997</YEAR>
+		<No>14</No>
+		<TITLE>Underwater</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>9.36</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Tupelo Honey</TITLE>
-		<ARTIST>Van Morrison</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Polydor</COMPANY>
-		<PRICE>8.20</PRICE>
-		<YEAR>1971</YEAR>
+		<No>15</No>
+		<TITLE>Diamond</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>8.23</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Soulsville</TITLE>
-		<ARTIST>Jorn Hoel</ARTIST>
-		<COUNTRY>Norway</COUNTRY>
-		<COMPANY>WEA</COMPANY>
-		<PRICE>7.90</PRICE>
-		<YEAR>1996</YEAR>
+		<No>16</No>
+		<TITLE>Stay Up</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>9.21</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>The very best of</TITLE>
-		<ARTIST>Cat Stevens</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Island</COMPANY>
-		<PRICE>8.90</PRICE>
-		<YEAR>1990</YEAR>
+		<No>17</No>
+		<TITLE>Candy</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>13.15</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Stop</TITLE>
-		<ARTIST>Sam Brown</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>A and M</COMPANY>
-		<PRICE>8.90</PRICE>
-		<YEAR>1988</YEAR>
+		<No>18</No>
+		<TITLE>UN Vilage</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>14.16</PRICE>
+		<YEAR>2019</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Bridge of Spies</TITLE>
-		<ARTIST>T'Pau</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Siren</COMPANY>
-		<PRICE>7.90</PRICE>
-		<YEAR>1987</YEAR>
+		<No>19</No>
+		<TITLE>Love Again</TITLE>
+		<ARTIST>백현</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>9.85</PRICE>
+		<YEAR>2020</YEAR>
 	</CD>
 	<CD>
-		<TITLE>Private Dancer</TITLE>
-		<ARTIST>Tina Turner</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>Capitol</COMPANY>
-		<PRICE>8.90</PRICE>
-		<YEAR>1983</YEAR>
-	</CD>
-	<CD>
-		<TITLE>Midt om natten</TITLE>
-		<ARTIST>Kim Larsen</ARTIST>
-		<COUNTRY>EU</COUNTRY>
-		<COMPANY>Medley</COMPANY>
-		<PRICE>7.80</PRICE>
-		<YEAR>1983</YEAR>
-	</CD>
-	<CD>
-		<TITLE>Pavarotti Gala Concert</TITLE>
-		<ARTIST>Luciano Pavarotti</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>DECCA</COMPANY>
-		<PRICE>9.90</PRICE>
-		<YEAR>1991</YEAR>
-	</CD>
-	<CD>
-		<TITLE>The dock of the bay</TITLE>
-		<ARTIST>Otis Redding</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>Atlantic</COMPANY>
-		<PRICE>7.90</PRICE>
-		<YEAR>1987</YEAR>
-	</CD>
-	<CD>
-		<TITLE>Picture book</TITLE>
-		<ARTIST>Simply Red</ARTIST>
-		<COUNTRY>EU</COUNTRY>
-		<COMPANY>Elektra</COMPANY>
-		<PRICE>7.20</PRICE>
-		<YEAR>1985</YEAR>
-	</CD>
-	<CD>
-		<TITLE>Red</TITLE>
-		<ARTIST>The Communards</ARTIST>
-		<COUNTRY>UK</COUNTRY>
-		<COMPANY>London</COMPANY>
-		<PRICE>7.80</PRICE>
-		<YEAR>1987</YEAR>
-	</CD>
-	<CD>
-		<TITLE>Unchain my heart</TITLE>
-		<ARTIST>Joe Cocker</ARTIST>
-		<COUNTRY>USA</COUNTRY>
-		<COMPANY>EMI</COMPANY>
-		<PRICE>8.20</PRICE>
-		<YEAR>1987</YEAR>
+		<No>20</No>
+		<TITLE>괜찮아도 괜찮아</TITLE>
+		<ARTIST>D.O</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>SM 엔터테인먼트</COMPANY>
+		<PRICE>13.86</PRICE>
+		<YEAR>2019</YEAR>
 	</CD>
 </CATALOG>
