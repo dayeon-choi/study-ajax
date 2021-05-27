@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.open("GET", "cd_catalog.xml", false);
+      xmlhttp.send();
+      xmlDoc = xmlhttp.responseXML;
+
+      x = xmlDoc.getElementsByTagName("CD");
+      i = 0;
+
+      function first() {
+        if (i > 0) {
+          i = 0;
+          displayCD();
+        }
+      }
+
+      function next() {
+        if (i < x.length - 1) {
+          i++;
+          displayCD();
+        }
+      }
+
+      function previous() {
+        if (i > 0) {
+          i--;
+          displayCD();
+        }
+      }
+
+      function end() {
+        if (i < x.length - 1) {
+          i = x.length - 1;
+          displayCD();
+        }
+      }
+
+      function displayCD() {
+        no = x[i].getElementsByTagName("No")[0].childNodes[0].nodeValue;
+        artist = x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+        title = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+        company =
+          x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue;
+        price = x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+        year = x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+        txt =
+          "No: " +
+          no +
+          "<br>Artist: " +
+          artist +
+          "<br>Title: " +
+          title +
+          "<br>Year: " +
+          year +
+          "<br>Company: " +
+          company +
+          "<br>Price: " +
+          price;
+        document.getElementById("showCD").innerHTML = txt;
+      }
+    </script>
+  </head>
+  <body onload="displayCD()">
+    <div id="showCD"></div>
+    <br />
+    <input type="button" onclick="first()" value="처음" id="firstButton" />
+    <input type="button" onclick="previous()" value="<<" class="middleButton" />
+    <input type="button" onclick="next()" value=">>" class="middleButton" />
+    <input type="button" onclick="end()" value="마지막" id="lastButton" />
+  </body>
+</html>

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+body {
+  background-color: rgb(175, 201, 250);
+}
+
+#showCD {
+  display: block;
+  color: #15436e;
+  margin-left: 15pt;
+  font-family: "Jua", sans-serif;
+}
+
+CATALOG {
+  background-color: #a2f9ff;
+  width: 100%;
+}
+CD {
+  display: block;
+  margin-bottom: 30pt;
+  margin-left: 0;
+}
+No {
+  color: #050652;
+  font-size: 25pt;
+  font-weight: bold;
+}
+TITLE {
+  color: #13158b;
+  font-size: 20pt;
+}
+ARTIST {
+  color: #006eff;
+  font-size: 20pt;
+  margin-left: 15pt;
+}
+COUNTRY,
+PRICE,
+YEAR,
+COMPANY {
+  display: block;
+  color: #000000;
+  margin-left: 20pt;
+}
+
+#firstButton {
+  width: 100px;
+  height: 30px;
+
+  border: none;
+  outline: 0;
+  border-radius: 8px 0px 0px 8px;
+  background-color: #1d4e7c;
+  color: white;
+
+  font-weight: 498;
+  font-family: "Jua", sans-serif;
+
+  cursor: pointer;
+}
+#lastButton {
+  width: 100px;
+  height: 30px;
+
+  border: none;
+  outline: 0;
+  border-radius: 0px 8px 8px 0px;
+  background-color: #1d4e7c;
+  color: white;
+
+  font-weight: 498;
+  font-family: "Jua", sans-serif;
+
+  cursor: pointer;
+}
+.middleButton {
+  width: 60px;
+  height: 30px;
+
+  border: none;
+  outline: 0;
+  background-color: #1d4e7c;
+  color: white;
+
+  font-weight: 498;
+  font-family: "Jua", sans-serif;
+
+  cursor: pointer;
+}
