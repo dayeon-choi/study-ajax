@@ -1,3 +1,6 @@
+let selectKind = "ALL";
+let selectYN = "Y";
+
 window.onload = function () {
   var interval = setInterval(handleRefresh, 3000);
   handleRefresh();
@@ -8,6 +11,15 @@ function handleRefresh() {
     "http://openapi.seoul.go.kr:8088/486e485945646179313036596c477073/xml/childSchoolSafetyEdu_jn/1/200/";
   $.getJSON(url, updateChildSchoolSafety);
 }
+
+onChangeKind = (e) => {
+  selectKind = e.target.name;
+  console.log(selectKink);
+};
+onChangeYN = (e) => {
+  selectYN = e.target.name;
+  console.log(selectYN);
+};
 
 function updateChildSchoolSafety(lectures) {
   var lecturesDiv = document.getElementById("childSchoolSafety");

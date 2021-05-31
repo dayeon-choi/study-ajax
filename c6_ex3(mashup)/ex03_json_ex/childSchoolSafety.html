@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, user-schalable=no, initial-scale=1.0"
     />
-    <title>3315최다연_관악구 강좌 리스트-객체</title>
+    <title>3315최다연_서울특별시 종로구 유치원 안전점검 교육 실시 현황</title>
     <script type="text/javascript" src="childSchoolSafety.js"></script>
     <link rel="stylesheet" href="childSchoolSafety.css" />
     <link
@@ -21,17 +21,51 @@
     <div
       data-role="header"
       style="
-        background: #250055;
-        color: rgb(255, 255, 255);
+        background: #fff23e;
+        color: rgb(60, 75, 7);
         text-align: center;
         height: 25px;
         font-size: 15pt;
         padding: 20px;
       "
     >
-      관악구 강좌 리스트-조회 서비스
+      서울특별시 종로구 유치원 안전점검 교육 실시 현황
     </div>
+    <div id="dropdown">
+      <center>
+        <label for="kind"
+          >다음의 점검 항목과 관련된 유치원의 모든 정보 보기</label
+        >
+      </center>
+      <select name="kind">
+        <option value="ALL" onchange="{onChangeKind}">모두</option>
+        <option value="FIRE_AVD_YN" onchange="{onChangeKind}">
+          소방대피훈련
+        </option>
+        <option value="GAS_CK_YN" onchange="{onChangeKind}">가스점검</option>
+        <option value="FIRE_SAFE_YN" onchange="{onChangeKind}">
+          소방안전점검
+        </option>
+        <option value="ELECT_CK_YN" onchange="{onChangeKind}">
+          전기설비점검
+        </option>
+        <option value="PLYG_CK_YN" onchange="{onChangeKind}">
+          놀이시설안전검사
+        </option>
+        <option value="CCTV_IST_YN" onchange="{onChangeKind}">CCTV설치</option>
+      </select>
 
+      <center>
+        <label for="yn"
+          >다음의 점검 여부와 관련된 유치원의 모든 정보 보기</label
+        >
+      </center>
+      <select name="yn">
+        <option value="ALL" onchange="{onChangeYN}">모두</option>
+        <option value="Y" onchange="{onChangeYN}">점검</option>
+        <option value="N" onchange="{onChangeYN}">미점검</option>
+      </select>
+    </div>
     <div id="childSchoolSafety"></div>
   </body>
 </html>
