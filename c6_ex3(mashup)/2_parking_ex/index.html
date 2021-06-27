@@ -1,57 +1,132 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- 로고 만들기와 모바일웹앱으로 보이기 -->
-
-
-
-
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
+    <link rel="icon" type="image/png" href="img/logo.png" sizes="192x192" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <!-- bootstrap 적용하기 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <title>3315최다연_서울시 공영주차장 안내</title>
 
+    <style>
+      html,
+      body {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <!-- 카카오 키 연결하기 -->
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd0ac1dfd6bec1d738b8f6c511ec8756&libraries=services"
+    ></script>
+    <script src="parking.js"></script>
+  </head>
 
-
-
-	
-    <title>서울시 공영주차장 안내</title>
-
-	<style>
-		html, body {
-			padding:0px;
-			margin:0px;
-			width:100%;
-			height:100%;
-		}
-	</style>
-	<!-- 카카오 키 연결하기 -->
-<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=키연결&libraries=services"></script> 
-<script src="parking.js"></script>
-</head>
-
-<body>
-
-	<div id="cover_close" onclick="document.getElementById('cover_close').style.display = 'none';" style="cursor:pointer;">
-	<!-- style.display = 'none': click 하면 사라짐 -->
-		<img src="bg_img.png" style="width:100%; height:100%; position:absolute; z-index:6;">
-		<img src="fg_txt.png" style="width:70%; height:100%;left:15%; position:absolute; z-index:7;">
-	</div>
-	<!--   1.지도  ->  3.셀렉트 유료 무료 버튼  4. 평일/주말, 평일 버튼 -> 5.버튼 -> 6.검정배경  ->  7.공영주차장그림 -->
-	<div>
-	<select id='pay' style="z-index:3; margin-left:10px; margin-top:5px; font-family:dotum; font-size:0.7em; vertical-align:middle;">
-	 <option value='notfree' seleceted> 유료</option>
-	 <option value='free' >무료</option>
-	</select>
-	
-	<select id='run' style="z-index:4;font-family:dotum; font-size:0.7em; vertical-align:middle; margin-top:5px;">
-	 <option value='week' seleceted> 평일/주말 이용가능</option>
-	 <option value='weekday' >평일 이용가능</option>
-	</select>
-	
-	<input  type='button' value='검색' id='button' style="font-family:dotum;z-index:5; font-size:0.7em; vertical-align:middle; margin-top:5px; background-color:#fff; border:0; cursor:pointer;"/>
-	</div>
-	<div id="map" style="width:100%; height:100%; z-index:1;"></div>
-	
-</body>
+  <body>
+    <div
+      class="container-fluid"
+      style="margin-left: 0px; padding: 0px; margin: 0px"
+    >
+      <div
+        id="cover_close"
+        onclick="document.getElementById('cover_close').style.display = 'none';"
+        style="cursor: pointer"
+      >
+        <!-- style.display = 'none': click 하면 사라짐 -->
+        <img
+          src="bg_img.png"
+          style="
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 6;
+            padding: 0px;
+            margin: 0px;
+          "
+        />
+        <img
+          src="parking-area.png"
+          style="
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 7;
+            padding: 0px;
+            margin: 0px;
+          "
+        />
+      </div>
+      <!--   1.지도  ->  3.셀렉트 유료 무료 버튼  4. 평일/주말, 평일 버튼 -> 5.버튼 -> 6.검정배경  ->  7.공영주차장그림 -->
+      <div>
+        <center>
+          <select
+            class="btn btn-outline-primary"
+            id="pay"
+            style="
+              height: 30px;
+              width: 75px;
+              z-index: 3;
+              font-family: dotum;
+              font-size: 15px;
+              vertical-align: middle;
+            "
+          >
+            <option value="notfree" seleceted>유료</option>
+            <option value="free">무료</option>
+          </select>
+          <select
+            class="btn btn-outline-primary"
+            id="run"
+            style="
+              height: 30px;
+              width: 180px;
+              z-index: 4;
+              font-family: dotum;
+              font-size: 15px;
+              vertical-align: middle;
+            "
+          >
+            <option value="week" seleceted>평일/주말 이용가능</option>
+            <option value="weekday">평일 이용가능</option>
+          </select>
+          <button
+            class="btn btn-outline-danger"
+            type="button"
+            id="button"
+            style="
+              height: 30px;
+              width: 60px;
+              z-index: 5;
+              font-family: dotum;
+              font-size: 15px;
+              vertical-align: middle;
+              cursor: pointer;
+            "
+          >
+            검색
+          </button>
+        </center>
+      </div>
+    </div>
+    <div id="map" style="width: 100%; height: 100%; z-index: 1"></div>
+  </body>
 </html>
