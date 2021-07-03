@@ -4,54 +4,24 @@ var marker;
 var mapContainer;
 var lat, lon;
 window.onload = function () {
-  //처음 실행시 handRefresh함수 실행
-
   navigator.geolocation.getCurrentPosition(function (position) {
     (lat = position.coords.latitude), // 위도
       (lon = position.coords.longitude); // 경도
   });
-  /*	getmyLocation();*/
   handleRefresh();
 };
 
 function find() {
-  //find 버튼을 눌렀을 때(onClick)
-  (mapContainer = document.getElementById("map")), // 지도를 표시할 div 설정
+  //find 버튼 onclick
+  (mapContainer = document.getElementById("map")), // 지도를 표시할
     (mapOption = {
       center: new daum.maps.LatLng(37.56544, 126.977119, 17), // 지도 중심좌표 시청으로 임의 지정.
       level: 7, // 지도의 확대 레벨
     });
 
-  var gu = document.getElementById("gu"); //html의 gu를 가져온다.
-  gus = gu.options[gu.selectedIndex].value; //gus는 gu의 값을 가지고 있다.(ex: 강북구, 강동구..)
+  var gu = document.getElementById("gu"); //html의 gu
+  gus = gu.options[gu.selectedIndex].value; //(ex: 강북구, 강동구..)
 
-  /*
-	0 : 강남구 -37.4968488,127.0679394
-	1 : 강동구 -37.5492994,127.1464275
-	2 : 강북구 -37.6482131,127.0164069
-	3 : 강서구 -37.552593,126.85051
-	4 : 관악구 -37.4654529,126.9442478
-	5 : 광진구 -37.5388,127.083445
-	6 : 구로구 -37.495765,126.8578697
-	7 : 금천구 -37.4599896,126.9012665
-	8 : 노원구 -37.6541956,127.0769692
-	9 : 도봉구 -37.6662325,127.0298724
-	10 : 동대문구 -37.5835755,127.0505528
-	11 : 동작구 -37.4971121,126.944378
-	12 : 마포구 -37.5615964,126.9086431
-	13 : 서대문구 -37.583312,126.9356601
-	14 : 서초구 -37.483574,127.032661
-	15 : 성동구 -37.5508768,127.0408952
-	16 : 성북구 - 37.6023295,127.025236
-	17 : 송파구 -37.504741,127.1144649
-	18 : 양천구 -37.527432,126.8558783
-	19 : 영등포구 -37.525423,126.896395
-	20 : 용산구 -37.5305208,126.9809672
-	21 : 은평구 -37.6175107,126.9249166
-	22 : 종로구 -37.6009106,126.9835817
-	23 : 중구 -37.5576747,126.9941653
-	24 : 중랑구 -37.5950497,127.0957062
-	 */
   switch (
     gu.selectedIndex //선택된 인덱스 번호
   ) {
@@ -245,11 +215,7 @@ function displayMarker(locPosition, message) {
   map.setCenter(locPosition);
 }
 function handleRefresh() {
-  for (
-    var i = 1;
-    i < 16000;
-    i = i + 1000 //16번 호출 i=1 j=1000, i=1001 j=2000, i=2001 j=3000,..., i=15001 j=16000 까지
-  ) {
+  for (var i = 1; i < 16000; i = i + 1000) {
     var j = i + 999;
     // var url="http://openAPI.seoul.go.kr:8088/644d42625173756e35354e6d636d63/json/SeoulPublicLibrary/"+i+"/"+j;
     var url =
@@ -264,7 +230,6 @@ function handleRefresh() {
   var newScriptElement = document.createElement("script");
   newScriptElement.setAttribute("src", url);
 
-  /*jsonp를 사용하여 스크립트 정보를 갱신*/
   newScriptElement.setAttribute("id", "jsonp");
   var oldScriptElement = document.getElementById("jsonp");
   var head = document.getElementsByTagName("head")[0];
@@ -280,7 +245,7 @@ function updateLibrary(librarys) {
   var librarys = librarys.SeoulPublicLibraryInfo.row;
   var addr = "";
 
-  var center = map.getCenter(); // 중심 가져오기
+  var center = map.getCenter(); // 중심
   var position = {
     latitude: center.getLat(),
     longitude: center.getLng(),
@@ -288,18 +253,18 @@ function updateLibrary(librarys) {
 
   for (var i = 0; i < librarys.length; i++) {
     var lib = librarys[i];
-    var imageSrc = "marker1.png",
-      imageSize = new daum.maps.Size(27, 40), //마커의 크기(daummap에서 size 검색, 크기정보를 가지고 있는 사이즈 객체 생성)
-      imageOption = { offset: new daum.maps.Point(14, 28) }; //point 검색, 화면 좌표 정보를 담고 있는 포인터 객체 생성
+    var imageSrc = "marker.png",
+      imageSize = new daum.maps.Size(27, 40), //마커의 크기
+      imageOption = { offset: new daum.maps.Point(14, 28) }; //point 검색(포인터 객체 생성)
 
     var loc = {
       //open API의 값들 위도와 경도
       latitude: lib.XCNTS,
       longitude: lib.YDNTS,
     };
-    var km = computeDistance(position, loc); //거리 계산, position 지도의 중심좌표이고 loc는 각 주차장 좌표
+    var km = computeDistance(position, loc); //거리 계산
     if (addr != lib.ADRES && km <= 3) {
-      //주소가 중복되지 않고, 거리가 2km이내의 것들을 가져온다.
+      //주소가 중복 없으며 거리가 2km이내
       addr = lib.ADRES;
       addMarker(
         imageSrc,
@@ -384,10 +349,10 @@ function addBound() {
     center: map.getCenter(), // 원의 중심좌표 입니다
     radius: 3000, // 미터 단위의 원의 반지름입니다
     strokeWeight: 5, // 선의 두께입니다
-    strokeColor: "#F7D358", // 선의 색깔입니다
+    strokeColor: "#94053c", // 선의 색깔입니다
     strokeOpacity: 0.5, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
     strokeStyle: "solid", // 선의 스타일 입니다
-    fillColor: "#F7FE2E", // 채우기 색깔입니다
+    fillColor: "#94053c", // 채우기 색깔입니다
     fillOpacity: 0.3, // 채우기 불투명도 입니다
     zIndex: 1,
   });
