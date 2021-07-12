@@ -4,16 +4,17 @@
 <title>문자쓰기</title>
   <script>
   	function initiate(){
-  	  var elem=document.getElementById('canvas');
-  	  canvas=elem.getContext('2d');
-  
-  	  canvas.shadowColor="rgba(0,0,0,0.5)"; /* 그림자의 색상을 선언 */
-      canvas.shadowOffsetX=4;
-  	  canvas.shadowOffsetY=4;
-  	  canvas.shadowBlur=5;
-  	  
-  	  canvas.font="bold 50px verdana, sans-serif";
-  	  canvas.fillText("It's a beautiful day!", 100,100);
+		var elem=document.getElementById('canvas');
+		canvas=elem.getContext('2d');
+
+		canvas.shadowColor="red"; /* 그림자의 색상을 선언 */
+		canvas.shadowOffsetX=15;
+		canvas.shadowOffsetY=40;
+		canvas.shadowBlur=8;
+		canvas.fillStyle="darkblue"
+
+		canvas.font="bold 50px verdana, sans-serif";
+		canvas.fillText("It's a beautiful day!", 100,100);
   	}
   	window.addEventListener("load", initiate, false);
    </script>

@@ -14,9 +14,20 @@
   	  canvas.stroke();
 
       canvas.beginPath();
-      canvas.arc(250,100,50,0,Math.PI*1.5,false);
+      canvas.arc(300,100,50,degreesToRadians(270),0,true);
+      canvas.stroke();
+      
+      canvas.beginPath();
+      canvas.moveTo(300,50);
+      convas.lineTo(300,100);
+      canvas.moveTo(300,100);
+      convas.lineTo(350,100);
       canvas.stroke();
   	}
+    function degreesToRadians(degrees){
+      radians = (degrees*Math.PI)/180;
+      return radians;
+    }
   	window.addEventListener("load", initiate, false);
   </script>
 </head>
